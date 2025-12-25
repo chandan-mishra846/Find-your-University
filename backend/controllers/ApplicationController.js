@@ -47,7 +47,7 @@ class ApplicationController {
         });
       }
 
-      // Check eligibility
+      // Check eligibility - both GPA and IELTS must meet minimum requirements
       if (parseFloat(gpa) < program.min_gpa || parseFloat(ielts_score) < program.min_ielts) {
         return res.status(400).json({
           success: false,

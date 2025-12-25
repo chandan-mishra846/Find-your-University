@@ -47,6 +47,20 @@ export default function ApplicationModal({ university, onClose }) {
       return;
     }
 
+    // Validate GPA range
+    const gpaNum = parseFloat(formData.gpa);
+    if (gpaNum < 0 || gpaNum > 4) {
+      setError('GPA must be between 0 and 4.0 (on 4.0 scale)');
+      return;
+    }
+
+    // Validate IELTS range
+    const ieltsNum = parseFloat(formData.ielts_score);
+    if (ieltsNum < 0 || ieltsNum > 9) {
+      setError('IELTS score must be between 0 and 9');
+      return;
+    }
+
     setLoading(true);
     setError('');
 
