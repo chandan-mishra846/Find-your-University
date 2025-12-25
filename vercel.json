@@ -4,29 +4,12 @@
     {
       "src": "backend/server-mock.js",
       "use": "@vercel/node"
-    },
-    {
-      "src": "frontend/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "frontend/build"
-      }
     }
   ],
   "routes": [
     {
       "src": "/api/(.*)",
       "dest": "backend/server-mock.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "frontend/$1"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "backend/server-mock.js"
     }
   ]
 }

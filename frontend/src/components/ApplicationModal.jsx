@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { X, User, Mail, Phone, Calendar, Globe, Award, CheckCircle, AlertCircle } from 'lucide-react';
-import axios from 'axios';
+import { applicationAPI } from '../utils/apiClient';
 
 export default function ApplicationModal({ university, onClose }) {
   const [step, setStep] = useState(1);
@@ -51,7 +51,7 @@ export default function ApplicationModal({ university, onClose }) {
     setError('');
 
     try {
-      await axios.post('http://localhost:5000/api/applications', {
+      await applicationAPI.submitApplication({
         university_id: university.id,
         program_id: university.program_id,
         ...formData,
