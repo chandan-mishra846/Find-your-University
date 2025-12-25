@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
 import HeroSection from './components/HeroSection.jsx';
 import FilterSection from './components/FilterSection.jsx';
@@ -23,27 +23,16 @@ function App() {
   const [selectedUniversity, setSelectedUniversity] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  // Fetch countries on mount
-  useEffect(() => {
-    fetchCountries();
-    fetchUniversities();
-  }, []);
-
-  // Fetch universities when filters change
-  useEffect(() => {
-    fetchUniversities();
-  }, [filters]);
-
-  const fetchCountries = async () => {
+  const fetchCountries = useCallback(async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/countries');
+      const response = await axios.get('/api/countries');
       setCountries(response.data.countries);
     } catch (error) {
       console.error('Error fetching countries:', error);
     }
-  };
+  }, []);
 
-  const fetchUniversities = async () => {
+  const fetchUniversities = useCallback(async () => {
     setLoading(true);
     try {
       const params = new URLSearchParams();
@@ -53,14 +42,20 @@ function App() {
         }
       });
       
-      const response = await axios.get(`http://localhost:5000/api/universities?${params.toString()}`);
+      const response = await axios.get(`/api/universities?${params.toString()}`);
       setUniversities(response.data.universities);
     } catch (error) {
       console.error('Error fetching universities:', error);
     } finally {
       setLoading(false);
     }
-  };
+  }, [filters]);
+
+  // Initial load + react to filter changes via function identity
+  useEffect(() => {
+    fetchCountries();
+    fetchUniversities();
+  }, [fetchCountries, fetchUniversities]);
 
   const handleQuickSearch = (country, degreeLevel) => {
     setFilters(prev => ({
