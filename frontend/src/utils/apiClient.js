@@ -1,7 +1,17 @@
 import axios from 'axios';
 
-// Use CRA proxy for local development to avoid hardcoded host
-export const API_BASE_URL = '/api';
+// Resolve API base with fallbacks for Vercel preview/prod
+const resolveApiBase = () => {
+  if (process.env.REACT_APP_API_URL) return process.env.REACT_APP_API_URL;
+  if (typeof window !== 'undefined' && window.location.hostname.includes('vercel.app')) {
+    return 'https://find-your-university-ymac.onrender.com/api';
+  }
+  return '/api';
+};
+
+const API_BASE_URL = resolveApiBase();
+
+export { API_BASE_URL };
 
 export const apiClient = axios.create({
   baseURL: API_BASE_URL,
