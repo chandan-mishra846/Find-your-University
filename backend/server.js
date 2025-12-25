@@ -14,52 +14,52 @@ const mockUniversities = [
   {
     id: 1, name: 'Harvard University', country: 'United States', city: 'Cambridge',
     program_id: 1, program_name: 'Computer Science', degree_level: "Bachelor's",
-    tuition_fee: 54269, duration_years: 4, min_gpa: 3.80, min_ielts: 7.5, application_fee: 75, ranking: 1
+    tuition_fee: 54269, duration_years: 4, min_gpa: 9.50, min_ielts: 7.5, application_fee: 75, ranking: 1
   },
   {
     id: 2, name: 'Stanford University', country: 'United States', city: 'Stanford',
     program_id: 4, program_name: 'Engineering', degree_level: "Bachelor's",
-    tuition_fee: 56169, duration_years: 4, min_gpa: 3.75, min_ielts: 7.0, application_fee: 90, ranking: 2
+    tuition_fee: 56169, duration_years: 4, min_gpa: 9.38, min_ielts: 7.0, application_fee: 90, ranking: 2
   },
   {
     id: 3, name: 'University of Oxford', country: 'United Kingdom', city: 'Oxford',
     program_id: 7, program_name: 'Law', degree_level: "Bachelor's",
-    tuition_fee: 39010, duration_years: 3, min_gpa: 3.85, min_ielts: 7.5, application_fee: 75, ranking: 3
+    tuition_fee: 39010, duration_years: 3, min_gpa: 9.63, min_ielts: 7.5, application_fee: 75, ranking: 3
   },
   {
     id: 4, name: 'University of Cambridge', country: 'United Kingdom', city: 'Cambridge',
     program_id: 10, program_name: 'Mathematics', degree_level: "Bachelor's",
-    tuition_fee: 38030, duration_years: 3, min_gpa: 3.80, min_ielts: 7.5, application_fee: 75, ranking: 4
+    tuition_fee: 38030, duration_years: 3, min_gpa: 9.50, min_ielts: 7.5, application_fee: 75, ranking: 4
   },
   {
     id: 5, name: 'MIT', country: 'United States', city: 'Cambridge',
     program_id: 13, program_name: 'Electrical Engineering', degree_level: "Bachelor's",
-    tuition_fee: 55510, duration_years: 4, min_gpa: 3.85, min_ielts: 7.0, application_fee: 75, ranking: 5
+    tuition_fee: 55510, duration_years: 4, min_gpa: 9.63, min_ielts: 7.0, application_fee: 75, ranking: 5
   },
   {
     id: 6, name: 'University of Toronto', country: 'Canada', city: 'Toronto',
     program_id: 16, program_name: 'Computer Science', degree_level: "Bachelor's",
-    tuition_fee: 44020, duration_years: 4, min_gpa: 3.30, min_ielts: 6.5, application_fee: 85, ranking: 25
+    tuition_fee: 44020, duration_years: 4, min_gpa: 8.25, min_ielts: 6.5, application_fee: 85, ranking: 25
   },
   {
     id: 1, name: 'Harvard University', country: 'United States', city: 'Cambridge',
     program_id: 2, program_name: 'Business Administration (MBA)', degree_level: "Master's",
-    tuition_fee: 73440, duration_years: 2, min_gpa: 3.60, min_ielts: 7.0, application_fee: 250, ranking: 1
+    tuition_fee: 73440, duration_years: 2, min_gpa: 9.00, min_ielts: 7.0, application_fee: 250, ranking: 1
   },
   {
     id: 2, name: 'Stanford University', country: 'United States', city: 'Stanford',
     program_id: 5, program_name: 'Computer Science', degree_level: "Master's",
-    tuition_fee: 57210, duration_years: 2, min_gpa: 3.50, min_ielts: 6.5, application_fee: 125, ranking: 2
+    tuition_fee: 57210, duration_years: 2, min_gpa: 8.75, min_ielts: 6.5, application_fee: 125, ranking: 2
   },
   {
     id: 6, name: 'University of Toronto', country: 'Canada', city: 'Toronto',
     program_id: 17, program_name: 'Business Analytics', degree_level: "Master's",
-    tuition_fee: 38450, duration_years: 1.5, min_gpa: 3.20, min_ielts: 6.5, application_fee: 120, ranking: 25
+    tuition_fee: 38450, duration_years: 1.5, min_gpa: 8.00, min_ielts: 6.5, application_fee: 120, ranking: 25
   },
   {
     id: 7, name: 'ETH Zurich', country: 'Switzerland', city: 'Zurich',
     program_id: 19, program_name: 'Physics', degree_level: "Bachelor's",
-    tuition_fee: 15000, duration_years: 3, min_gpa: 3.70, min_ielts: 6.5, application_fee: 100, ranking: 7
+    tuition_fee: 15000, duration_years: 3, min_gpa: 9.25, min_ielts: 6.5, application_fee: 100, ranking: 7
   },
 ];
 

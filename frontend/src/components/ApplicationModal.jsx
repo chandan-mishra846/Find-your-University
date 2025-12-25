@@ -47,10 +47,10 @@ export default function ApplicationModal({ university, onClose }) {
       return;
     }
 
-    // Validate GPA range
+    // Validate CGPA range
     const gpaNum = parseFloat(formData.gpa);
-    if (gpaNum < 0 || gpaNum > 4) {
-      setError('GPA must be between 0 and 4.0 (on 4.0 scale)');
+    if (gpaNum < 0 || gpaNum > 10) {
+      setError('CGPA must be between 0 and 10.0 (on 10.0 scale)');
       return;
     }
 
@@ -283,7 +283,7 @@ export default function ApplicationModal({ university, onClose }) {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <h4 className="font-semibold text-blue-900 mb-2">Minimum Requirements</h4>
                 <div className="space-y-1 text-sm text-blue-800">
-                  <p>• Minimum GPA: <span className="font-bold">{university.min_gpa}</span></p>
+                  <p>• Minimum CGPA: <span className="font-bold">{university.min_gpa}</span></p>
                   <p>• Minimum IELTS: <span className="font-bold">{university.min_ielts}</span></p>
                 </div>
               </div>
@@ -291,21 +291,21 @@ export default function ApplicationModal({ university, onClose }) {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Your GPA (on 4.0 scale) <span className="text-red-500">*</span>
+                    Your CGPA (on 10.0 scale) <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="number"
                     name="gpa"
                     required
                     min="0"
-                    max="4"
+                    max="10"
                     step="0.01"
                     value={formData.gpa}
                     onChange={handleChange}
                     className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                   <p className="text-xs text-gray-500 mt-1">
-                    e.g., 3.5
+                    e.g., 8.5
                   </p>
                 </div>
 

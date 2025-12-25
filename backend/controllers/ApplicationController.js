@@ -47,12 +47,12 @@ class ApplicationController {
         });
       }
 
-      // Check eligibility - both GPA and IELTS must meet minimum requirements
+      // Check eligibility - both CGPA and IELTS must meet minimum requirements
       if (parseFloat(gpa) < program.min_gpa || parseFloat(ielts_score) < program.min_ielts) {
         return res.status(400).json({
           success: false,
           error: 'Not eligible',
-          message: `Your GPA (${gpa}) or IELTS score (${ielts_score}) does not meet the minimum requirements (GPA: ${program.min_gpa}, IELTS: ${program.min_ielts}) for ${program.program_name}.`,
+          message: `Your CGPA (${gpa}) or IELTS score (${ielts_score}) does not meet the minimum requirements (CGPA: ${program.min_gpa}, IELTS: ${program.min_ielts}) for ${program.program_name}.`,
           eligible: false
         });
       }
