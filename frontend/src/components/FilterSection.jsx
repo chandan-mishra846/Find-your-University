@@ -62,27 +62,27 @@ export default function FilterSection({ filters, onFilterChange, countries }) {
               </div>
             </div>
 
-            {/* GPA Input */}
+            {/* CGPA Input */}
             <div className="bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-3">
                 <Award className="w-5 h-5 text-yellow-600" />
                 <label htmlFor="gpa" className="font-medium text-gray-900">
-                  Your GPA
+                  Your CGPA
                 </label>
               </div>
               <input
                 id="gpa"
                 type="number"
                 min="0"
-                max="4"
+                max="10"
                 step="0.01"
-                placeholder="e.g., 3.5"
+                placeholder="e.g., 8.5"
                 value={filters.gpa}
                 onChange={handleGpaChange}
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <p className="text-xs text-gray-500 mt-2">
-                On a 4.0 scale (shows eligibility)
+                On a 10.0 scale (shows eligibility)
               </p>
             </div>
 
