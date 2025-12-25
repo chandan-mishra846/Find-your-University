@@ -152,7 +152,7 @@ app.post('/api/applications', (req, res) => {
   if (gpa < university.min_gpa || ielts_score < university.min_ielts) {
     return res.status(400).json({ 
       error: 'Not eligible',
-      message: `Your CGPA (${gpa}) or IELTS score (${ielts_score}) does not meet the minimum requirements (CGPA: ${university.min_gpa}, IELTS: ${university.min_ielts}) for ${university.program_name}.`,
+      message: `Your GPA (${gpa}) or IELTS score (${ielts_score}) does not meet the minimum requirements (GPA: ${university.min_gpa}, IELTS: ${university.min_ielts}) for ${university.program_name}.`,
       eligible: false
     });
   }

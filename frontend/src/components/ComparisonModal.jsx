@@ -95,9 +95,9 @@ export default function ComparisonModal({ universities, onClose }) {
                   ))}
                 </tr>
 
-                {/* Min CGPA */}
+                {/* Min GPA */}
                 <tr className="border-b border-gray-100 hover:bg-gray-50 bg-yellow-50">
-                  <td className="py-4 px-4 font-medium text-gray-700">Min CGPA Required</td>
+                  <td className="py-4 px-4 font-medium text-gray-700">Min GPA Required</td>
                   {universities.map((uni) => (
                     <td key={uni.program_id} className="py-4 px-4 text-center">
                       <span className="font-bold text-yellow-700">{uni.min_gpa}</span>

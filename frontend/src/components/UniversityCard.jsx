@@ -52,7 +52,7 @@ export default function UniversityCard({ university, isSelected, onCompareToggle
           </div>
           <div className="flex items-center gap-2 text-sm text-gray-600">
             <Award className="w-4 h-4 text-yellow-600" />
-            <span>Min CGPA: {university.min_gpa} | IELTS: {university.min_ielts}</span>
+            <span>Min GPA: {university.min_gpa} | IELTS: {university.min_ielts}</span>
           </div>
         </div>
 

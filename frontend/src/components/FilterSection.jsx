@@ -62,12 +62,12 @@ export default function FilterSection({ filters, onFilterChange, countries }) {
               </div>
             </div>
 
-            {/* CGPA Input */}
+            {/* GPA Input */}
             <div className="bg-gray-50 p-4 rounded-lg">
               <div className="flex items-center gap-2 mb-3">
                 <Award className="w-5 h-5 text-yellow-600" />
                 <label htmlFor="gpa" className="font-medium text-gray-900">
-                  Your CGPA
+                  Your GPA
                 </label>
               </div>
               <input

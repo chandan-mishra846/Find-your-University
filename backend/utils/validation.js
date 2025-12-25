@@ -33,9 +33,9 @@ const validateApplicationData = (data) => {
   }
 
   if (!data.gpa) {
-    errors.push('CGPA is required');
+    errors.push('GPA is required');
   } else if (!validateGPA(data.gpa)) {
-    errors.push('CGPA must be between 0 and 10');
+    errors.push('GPA must be between 0 and 10');
   }
 
   if (!data.ielts_score) {

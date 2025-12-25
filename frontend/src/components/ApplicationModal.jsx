@@ -47,10 +47,10 @@ export default function ApplicationModal({ university, onClose }) {
       return;
     }
 
-    // Validate CGPA range
+    // Validate GPA range
     const gpaNum = parseFloat(formData.gpa);
     if (gpaNum < 0 || gpaNum > 10) {
-      setError('CGPA must be between 0 and 10.0 (on 10.0 scale)');
+      setError('GPA must be between 0 and 10.0 (on 10.0 scale)');
       return;
     }
 
@@ -283,7 +283,7 @@ export default function ApplicationModal({ university, onClose }) {
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
                 <h4 className="font-semibold text-blue-900 mb-2">Minimum Requirements</h4>
                 <div className="space-y-1 text-sm text-blue-800">
-                  <p>• Minimum CGPA: <span className="font-bold">{university.min_gpa}</span></p>
+                  <p>• Minimum GPA: <span className="font-bold">{university.min_gpa}</span></p>
                   <p>• Minimum IELTS: <span className="font-bold">{university.min_ielts}</span></p>
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function ApplicationModal({ university, onClose }) {
               <div className="space-y-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Your CGPA (on 10.0 scale) <span className="text-red-500">*</span>
+                    Your GPA (on 10.0 scale) <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="number"
