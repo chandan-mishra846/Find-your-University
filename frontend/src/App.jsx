@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from './utils/apiClient';
 import HeroSection from './components/HeroSection.jsx';
 import FilterSection from './components/FilterSection.jsx';
 import UniversityCard from './components/UniversityCard.jsx';
@@ -25,8 +26,8 @@ function App() {
 
   const fetchCountries = useCallback(async () => {
     try {
-      const response = await axios.get('/api/countries');
-      setCountries(response.data.countries);
+      const response = await axios.get(`${API_BASE_URL}/countries`);
+      setCountries(response.data?.countries || []);
     } catch (error) {
       console.error('Error fetching countries:', error);
     }
@@ -42,8 +43,8 @@ function App() {
         }
       });
       
-      const response = await axios.get(`/api/universities?${params.toString()}`);
-      setUniversities(response.data.universities);
+      const response = await axios.get(`${API_BASE_URL}/universities?${params.toString()}`);
+      setUniversities(response.data?.universities || []);
     } catch (error) {
       console.error('Error fetching universities:', error);
     } finally {
